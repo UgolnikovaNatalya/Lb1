@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:id="@+id/root">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/recycler">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="#D6D6D6"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:id="@+id/name_head"
+            android:text="Имя"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="#D6D6D6"
+            android:textAlignment="center"
+            android:id="@+id/age_head"
+            android:text="Возраст"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="#D6D6D6"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:id="@+id/weight_head"
+            android:text="Вес"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="#D6D6D6"
+            android:textAlignment="center"
+            android:id="@+id/height_head"
+            android:text="Рост"/>
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_show"
+        app:layout_constraintTop_toBottomOf="@id/linear"/>
+
+    <Button
+        android:id="@+id/btn_show"
+        android:text="Show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_fill"/>
+
+    <Button
+        android:id="@+id/btn_fill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_clear"
+        android:text="Fill" />
+
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Clear"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
